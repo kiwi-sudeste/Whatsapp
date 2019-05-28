@@ -1,0 +1,17 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Conversa</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  Digite Aqui, {{autorpage}}:
+  <ion-textarea name="mensagem" [(ngModel)]="mensagem" ngDefaultControl></ion-textarea>
+  <button ion-button round color="green" (click)="onAdd()">Enviar</button>
+  
+
+  <ion-card *ngFor = "let ms of msg">
+    {{ms.Autor}} diz: {{ms.texto}}
+  </ion-card>
+</ion-content>

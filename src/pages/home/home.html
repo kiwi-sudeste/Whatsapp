@@ -6,9 +6,22 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding >
+    <!-- Inputs with labels -->
+  <ion-item>
+    <ion-label position="floating" >Digite seu nome:</ion-label>
+    <ion-input name="autor" [(ngModel)]="autor" ngDefaultControl></ion-input>
+  </ion-item>
+
+    <ion-item>
+      <ion-label>Topicos</ion-label>
+      <ion-select multiple = "false" >
+        <ion-option value="esportes">Esportes</ion-option>
+        <ion-option value="cinema">Cinema</ion-option>
+        <ion-option value="diversos">Diversos</ion-option>
+      </ion-select>
+    </ion-item>
+    <br>
+    <button ion-button full round color="green" (click)="irproXet()">Ir pro chat</button>
+
 </ion-content>
